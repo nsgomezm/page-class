@@ -1,0 +1,39 @@
+.mySwiper{
+  position: relative;
+
+  [class*="fa-angle"]{
+    position: absolute;
+    top: 50%;
+    font-size: 32px;
+    cursor: pointer;
+
+    z-index: 500;
+
+    &.swiper-button-disabled{
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    &[class*='left']{
+      left: -.4rem;
+      transform: translateY(-50%);
+    }
+    &[class*='right']{
+      right: -.4rem;
+      transform: translateY(-50%);
+    }
+
+    @include media-breakpoint-up(lg){
+      font-size: 44px;
+
+      &[class*='left'] {
+        transform: translateY(-50%) translateX(-100%);
+      }
+      &[class*='right'] {
+        transform: translateY(-50%) translateX(100%);
+      }
+    }
+
+
+  }
+}

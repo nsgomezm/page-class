@@ -57,3 +57,61 @@
     display: none;
   }
 }
+
+.input-icon{
+  position: relative;
+
+  .form-control:has( ~ [class*='fa-']){
+    padding-left: 32px;
+
+    & ~ [class*='fa-']{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 30px;
+      @include  cross-center()
+    }
+  }
+  input{
+    border: 0;
+  }
+}
+
+
+.menu-social{
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+  @include media-breakpoint-down(md){
+    right: 1rem;
+    gap: 5px;
+    a{
+      transform: scale(.6);
+    }
+  }
+  a{
+    padding: .5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background: var(--color, red);
+    text-decoration: none;
+    color: white;
+    @include cross-center();
+    &:has(.fa-instagram){
+
+      --color: linear-gradient(45deg, #fd622d, #e518a0);
+    }
+    &:has(.fa-whatsapp){
+      --color: #00a784;
+    }
+  }
+
+
+}

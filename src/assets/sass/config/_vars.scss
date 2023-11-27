@@ -1,0 +1,16 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+
+$rc-primary: #e3b313;
+$rc-secondary: #03152d;
+
+$body-secondary-bg: #f0f1f5;
+
+
+$custom-colors: (
+  "rc-primary": $rc-primary,
+  "rc-secondary": $rc-secondary,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
